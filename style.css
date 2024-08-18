@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'myfont';
+    src: url(./Matemasie/Matemasie-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'krona';
+    src: url(./Krona_One/KronaOne-Regular.ttf);
+}
+
+
 .inp-upper-line{
     font-size: 13px;
     font-weight: bold;
@@ -6,4 +17,16 @@
     width: 70%;
     border-radius: 3px;
     border: none;
+}
+.board{
+    
+}
+.task-head{
+    /* font-weight: lighter; */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.esssence{
+    font-family: 'krona';
+    font-size: 20px;
+    color: white;
 }
