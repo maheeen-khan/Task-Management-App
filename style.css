@@ -8,6 +8,23 @@
     src: url(./Krona_One/KronaOne-Regular.ttf);
 }
 
+@keyframes firstAnimation{
+    /* from{
+        opacity: 0.5;
+    }
+    to{
+        opacity: 1;
+    } */
+
+    from{
+        filter: grayscale(100%);
+    }
+
+    to{
+        filter: grayscale(0%);
+    }
+}
+
 body{
     /* background-color: #E1B29B !important; */
     background: linear-gradient(90deg,#E1B29B,#AFB2B1);
@@ -48,8 +65,10 @@ body{
 .nav,.next-btn{
     background-color: #036B74!important;
 }
-.next-btn{
+
+.next-btn a{
     color: white !important;
+    text-decoration: none;
 }
 .next-btn:hover{
     background-color: #34adb8 !important;
@@ -59,6 +78,10 @@ body{
     color: black !important;
 }
 
+.sec-col{
+    animation-name: firstAnimation;
+    animation-duration: 5s;
+}
 @media screen and (max-width:768px){
     .first-head{
         text-align: center;
