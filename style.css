@@ -29,6 +29,8 @@ body{
 }
 .task-head{
     /* font-weight: lighter; */
+    font-size: 33px;
+    color: rgb(219, 64, 8);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .esssence{
@@ -38,4 +40,10 @@ body{
 }
 .first-col{
     /* border: 2px solid black; */
+}
+.nav,.first-btn{
+    background-color: rgb(42, 42, 196) !important;
+}
+.first-btn{
+    color: white !important;
 }
