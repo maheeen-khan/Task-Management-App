@@ -8,6 +8,10 @@
     src: url(./Krona_One/KronaOne-Regular.ttf);
 }
 
+body{
+    /* background-color: #E1B29B !important; */
+    background: linear-gradient(270deg,#E1B29B,#AFB2B1);
+}
 
 .inp-upper-line{
     font-size: 13px;
@@ -19,6 +23,8 @@
     border: none;
 }
 .board{
+    /* filter:drop-shadow( 12px 12px 30px grey); */
+    filter: drop-shadow(5px 26px 10px #4e4e4e);
     
 }
 .task-head{
@@ -29,4 +35,7 @@
     font-family: 'krona';
     font-size: 20px;
     color: white;
+}
+.first-col{
+    /* border: 2px solid black; */
 }
