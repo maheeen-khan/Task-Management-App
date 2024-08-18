@@ -43,7 +43,7 @@ body{
 }
 .first-head{
     font-family: 'krona';
-    font-size: 28px;
+    font-size: 26px;
 }
 .nav,.next-btn{
     background-color: #036B74!important;
@@ -57,4 +57,14 @@ body{
 .next-btn:active{
     background-color: #E7AE20 !important;
     color: black !important;
+}
+
+@media screen and (max-width:768px){
+    .first-head{
+        text-align: center;
+    }
+    #board-name{
+        width: 100%;
+    }
+   
 }
