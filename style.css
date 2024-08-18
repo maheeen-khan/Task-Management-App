@@ -41,9 +41,20 @@ body{
 .first-col{
     /* border: 2px solid black; */
 }
-.nav,.first-btn{
+.first-head{
+    font-family: 'krona';
+    font-size: 28px;
+}
+.nav,.next-btn{
     background-color: #036B74!important;
 }
-.first-btn{
+.next-btn{
     color: white !important;
+}
+.next-btn:hover{
+    background-color: #34adb8 !important;
+}
+.next-btn:active{
+    background-color: #E7AE20 !important;
+    color: black !important;
 }
