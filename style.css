@@ -18,10 +18,14 @@
 
     from{
         filter: grayscale(100%);
+        width: 10%;
+        height: 10vh;
     }
 
     to{
         filter: grayscale(0%);
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -42,7 +46,11 @@ body{
 .board{
     /* filter:drop-shadow( 12px 12px 30px grey); */
     filter: drop-shadow(5px 26px 10px #4e4e4e);
-    
+
+}
+.board{
+    /* animation-name: firstAnimation;
+    animation-duration: 5s; */
 }
 .task-head{
     /* font-weight: lighter; */
@@ -79,9 +87,17 @@ body{
 }
 
 .sec-col{
-    animation-name: firstAnimation;
-    animation-duration: 5s;
+    /* animation-name: firstAnimation;
+    animation-duration: 5s; */
 }
+
+
+/* ............................................Animation .................... */
+ 
+.animate__animated.animate__flipInY {
+    --animate-duration:2s;
+  }
+  
 
 /* ..............................media query..................................... */
 @media screen and (max-width:768px){
