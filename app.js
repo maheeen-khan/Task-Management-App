@@ -32,7 +32,11 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log(lists);
 
     var newList = this.createElement('div');
-    newList.innerHTML = `hello`;
+    newList.innerHTML = `+ Add list`;
+    newList.setAttribute('class', 'list');
+    newList.innerHTML += `<br><input type="text" name="todo" id="todo" class="my-3 p-1" placeholder="Kickoff meeting">`;
+    newList.innerHTML += `<br><button class="btn">+ Add a card</button>`
+
     lists.appendChild(newList);
 
 });

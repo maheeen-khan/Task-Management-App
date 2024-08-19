@@ -114,6 +114,19 @@ body{
     border-bottom-right-radius: 3px;
 
 }
+
+#lists{
+    /* color: white; */
+    border-radius: 7px;
+    background-color: #dddddd;
+}
+
+#todo{
+    border-radius: 6px;
+    border: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 11px 13px -5px, rgba(0, 0, 0, 0.3) 0px 6px 4px -8px;
+}
+
 /* ..............................media query..................................... */
 @media screen and (max-width:768px){
     .first-head{
