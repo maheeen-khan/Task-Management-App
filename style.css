@@ -99,6 +99,21 @@ body{
   }
   
 
+
+/* second page styling */
+
+.sec-nav-fluid{
+    background-color: #2196a1;
+    color: white;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+
+.nav2{
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+
+}
 /* ..............................media query..................................... */
 @media screen and (max-width:768px){
     .first-head{

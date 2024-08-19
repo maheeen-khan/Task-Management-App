@@ -1,17 +1,21 @@
 function mainPage(){
     
-    console.log(document.getElementById('board-name').value);
+    // console.log(document.getElementById('board-name').value);
 
     var boardName = document.getElementById('board-name').value;
-    // document.getElementById('sec-nav').innerHTML += `hi`;
 
         // Save the board name to localStorage
         localStorage.setItem('boardName', boardName);
 
+
+        document.getElementById('board-name').value = '';
+
+        
         // Navigate to the second page
         window.location.href = './main.html';
+    
+        
 
-    // console.log(document.querySelector('#sec-nav'))
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -20,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // If a board name exists, display it in the desired element
     if (boardName) {
-        document.getElementById('sec-nav').innerHTML += ` ${boardName}`;
+        document.getElementById('sec-nav').innerHTML += `<h5> ${boardName}</h5>`;
     }
 });
 
