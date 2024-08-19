@@ -26,6 +26,15 @@ document.addEventListener('DOMContentLoaded', function() {
     if (boardName) {
         document.getElementById('sec-nav').innerHTML += `<h5> ${boardName}</h5>`;
     }
+
+    
+    var lists = document.getElementById('lists');
+    console.log(lists);
+
+    var newList = this.createElement('div');
+    newList.innerHTML = `hello`;
+    lists.appendChild(newList);
+
 });
 
 
@@ -34,3 +43,5 @@ function enter(event){
         mainPage();
     }
 }
+
+// second page
