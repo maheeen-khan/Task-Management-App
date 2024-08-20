@@ -32,10 +32,17 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log(lists);
 
     var newList = this.createElement('div');
-    newList.innerHTML = `+ Add list`;
+
     newList.setAttribute('class', 'list');
-    newList.innerHTML += `<br><input type="text" name="todo" id="todo" class="my-3 p-1" placeholder="Kickoff meeting">`;
-    newList.innerHTML += `<br><button class="btn">+ Add a card</button>`
+    newList.classList.add('col-lg-4', 'col-md-4', 'col-sm-12');
+
+    newList.innerHTML = `<button class="btn add-list"> <span class="material-symbols-outlined pe-2"> add </span> Add list</button>`;
+
+
+    // newList.innerHTML += `<br><input type="text" name="todo" id="todo" class="my-3 p-1" placeholder="Kickoff meeting">`;
+    // newList.innerHTML += `<br><button class="btn"> <span class="material-symbols-outlined pe-2"> add </span> Add a card</button>`
+
+    console.log(newList);
 
     lists.appendChild(newList);
 

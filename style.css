@@ -118,7 +118,10 @@ body{
 #lists{
     /* color: white; */
     border-radius: 7px;
-    background-color: #dddddd;
+    /* background-color: #dddddd; */
+    background:linear-gradient(pink,orange);
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #todo{
@@ -127,6 +130,23 @@ body{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 11px 13px -5px, rgba(0, 0, 0, 0.3) 0px 6px 4px -8px;
 }
 
+
+.material-symbols-outlined{
+    font-size: 18px !important;
+}
+
+.btn{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center  !important;
+}
+.add-list{
+    border: 2px solid red !important;
+    width:100% ;
+    border-radius: 10px !important;
+    background-color: #80b2b7 !important;
+    color: white !important;
+}
 /* ..............................media query..................................... */
 @media screen and (max-width:768px){
     .first-head{
