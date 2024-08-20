@@ -41,23 +41,53 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Define the function to show the input field
     function enterListName() {
+
+        newList.innerHTML = '<b>todo</b><br>'
         // Create and show the input field for the list name
         const inputField = document.createElement('input');
         inputField.type = 'text';
         inputField.name = 'todo';
         inputField.id = 'todo';
-        inputField.className = 'my-3 p-1';
-        inputField.placeholder = 'Enter list name';
+        inputField.className = 'my-1 p-1';
+        inputField.placeholder = 'Kickoff meeting';
 
         // Add the input field after the "Add list" button
         newList.appendChild(inputField);
 
+       
+        addListButton.remove();
+
+ // add button....
+        // newList.innerHTML += `<button class="btn btn-outline-danger" onclick="addList()">Add List</button>`
+        
+        const add = document.createElement('button');
+        add.innerText = 'Add List'
+        add.id = 'add-list';
+        add.className = 'btn btn-outline-danger my-3 p-1';
+
+        // Add the input field after the "Add list" button
+        newList.appendChild(add);
+
+
+        add.onclick = function(){
+            addList();
+        };
+
         // Disable the "Add list" button after it's clicked to prevent multiple inputs
-        addListButton.disabled = true;
+        // addListButton.disabled = true;
+        function addList(){
+            console.log(document.getElementById('todo').value)
+        }
+        
+        
     }
+
+
 
     // Append the new list to the lists container
     lists.appendChild(newList);
+
+
 });
 
 function enter(event){
