@@ -148,6 +148,12 @@ body{
     color: white !important;
 
 }
+
+.list-first-line{
+    display: flex !important;
+    justify-content:space-between !important;
+    align-items: center !important;
+}
 /* ..............................media query..................................... */
 @media screen and (max-width:768px){
     .first-head{
