@@ -1,4 +1,4 @@
-function mainPage(){
+function mainPage() {
     var boardName = document.getElementById('board-name').value;
 
     // Save the board name to localStorage
@@ -11,7 +11,7 @@ function mainPage(){
     window.location.href = './main.html';
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Retrieve the board name from localStorage
     var boardName = localStorage.getItem('boardName');
 
@@ -30,12 +30,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const addListButton = document.createElement('button');
     addListButton.className = 'btn add-list';
     addListButton.innerHTML = '<span class="material-symbols-outlined pe-2"> add </span> Add list';
-    
+
     // Set up the click event to show the input field
-    addListButton.onclick = function() {
+    addListButton.onclick = function () {
         enterListName();
     };
-    
+
     // Append the "Add list" button to the new list
     newList.appendChild(addListButton);
 
@@ -54,12 +54,14 @@ document.addEventListener('DOMContentLoaded', function() {
         // Add the input field after the "Add list" button
         newList.appendChild(inputField);
 
-       
-        addListButton.remove();
 
- // add button....
+        // addListButton.remove();
+
+        addListButton.style.display = 'none';
+
+        // add button....
         // newList.innerHTML += `<button class="btn btn-outline-danger" onclick="addList()">Add List</button>`
-        
+
         const add = document.createElement('button');
         add.innerText = 'Add List'
         add.id = 'add-list';
@@ -69,17 +71,17 @@ document.addEventListener('DOMContentLoaded', function() {
         newList.appendChild(add);
 
 
-        add.onclick = function(){
+        add.onclick = function () {
             addList();
         };
 
         // Disable the "Add list" button after it's clicked to prevent multiple inputs
         // addListButton.disabled = true;
-        function addList(){
+        function addList() {
             console.log(document.getElementById('todo').value)
         }
-        
-        
+
+
     }
 
 
@@ -90,8 +92,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
-function enter(event){
-    if(event.keyCode === 13){
+function enter(event) {
+    if (event.keyCode === 13) {
         mainPage();
     }
 }
