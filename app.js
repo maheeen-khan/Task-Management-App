@@ -11,6 +11,7 @@ function mainPage() {
     window.location.href = './main.html';
 }
 var addListButton;
+
 document.addEventListener('DOMContentLoaded', function () {
     // Retrieve the board name from localStorage
     var boardName = localStorage.getItem('boardName');
@@ -31,74 +32,46 @@ document.addEventListener('DOMContentLoaded', function () {
     addListButton.className = 'btn add-list';
     addListButton.innerHTML = '<span class="material-symbols-outlined pe-2"> add </span> Add list';
 
-    // Set up the click event to show the input field
-    addListButton.onclick = function () {
-        enterListName();
-    };
-
     // Append the "Add list" button to the new list
     newList.appendChild(addListButton);
 
-    // Define the function to show the input field
-    function enterListName() {
-        var temp = '<span class="list-first-line"><b>todo</b><span class="material-symbols-outlined list-first-line bg-light" onclick="closeList(this)"> close </span></span>';
+    // Create the input field container but hide it initially
+    const inputFieldContainer = document.createElement('div');
+    inputFieldContainer.style.display = 'none'; // Initially hidden
+    inputFieldContainer.innerHTML = `
+        <span class="list-first-line">
+            <b>todo</b>
+            <span class="material-symbols-outlined list-first-line bg-light" onclick="closeList()"> close </span>
+        </span>
+        <br>
+        <input type="text" name="todo" id="todo" class="my-1 p-1" placeholder="Enter list name">
+        <br>
+        <button id="add-list" class="btn btn-outline-danger my-3 p-1">Add List</button>
+    `;
 
-        newList.innerHTML = temp + '<br>';
-        
-        // Create and show the input field for the list name
-        const inputField = document.createElement('input');
-        inputField.type = 'text';
-        inputField.name = 'todo';
-        inputField.id = 'todo';
-        inputField.className = 'my-1 p-1';
-        inputField.placeholder = 'Kickoff meeting';
+    // Append the input field container to the new list
+    newList.appendChild(inputFieldContainer);
 
-        // Add the input field after the "Add list" button
-        newList.appendChild(inputField);
+    // Set up the click event to show the input field and hide the "Add list" button
+    addListButton.onclick = function () {
+        addListButton.style.display = 'none'; 
+        inputFieldContainer.style.display = 'block'; 
+    };
 
-        // Hide the "Add list" button after it's clicked
-        addListButton.style.display = 'none';
+    // Define the close function
+    window.closeList = function () {
+        inputFieldContainer.style.display = 'none'; // Hide the input field and other elements
+        addListButton.style.display = 'inline-block'; // Show the "Add list" button again
+    };
 
-        // Create and append the "Add List" button
-        const add = document.createElement('button');
-        add.innerText = 'Add List';
-        add.id = 'add-list';
-        add.className = 'btn btn-outline-danger my-3 p-1';
-        newList.appendChild(add);
-
-        add.onclick = function () {
-            addList();
-        };
-
-        function addList() {
-            console.log(document.getElementById('todo').value);
-        }
-    }
+    // Handle adding a new list when "Add List" button is clicked
+    inputFieldContainer.querySelector('#add-list').onclick = function () {
+        console.log(document.getElementById('todo').value);
+    };
 
     // Append the new list to the lists container
     lists.appendChild(newList);
 });
-
-function closeList(element) {
-
-    
-    const parentList = element.closest('.list');
-    parentList.innerHTML = ''; // Clear the list content
-
-    // Recreate the "Add list" button and append it back
-    const addListButton = document.createElement('button');
-    addListButton.className = 'btn add-list';
-    addListButton.innerHTML = '<span class="material-symbols-outlined pe-2"> add </span> Add list';
-
-    addListButton.onclick = function () {
-        enterListName();
-    };
-
-    parentList.appendChild(addListButton);
-
-    console.log('List closed');
-}
-
 
 function enter(event) {
     if (event.keyCode === 13) {
